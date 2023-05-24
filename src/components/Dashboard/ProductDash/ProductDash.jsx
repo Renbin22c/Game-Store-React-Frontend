@@ -52,7 +52,10 @@ export function ProductDash({ product }) {
       <div>
         <Mask
           variant="squircle"
-          src={`http://localhost:5678${product.image.replace("image", "")}`}
+          src={`https://game-store-react-backend.onrender.com${product.image.replace(
+            "image",
+            ""
+          )}`}
           className="object-cover h-20 w-40"
         />
       </div>

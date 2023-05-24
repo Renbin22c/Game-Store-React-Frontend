@@ -18,7 +18,10 @@ export default function Products({ product }) {
     <GridItem my={4} w={{ base: "100%", md: "400px" }} className="product">
       <Box boxShadow="md" borderRadius="md" overflow="hidden" bg={bgColor}>
         <Image
-          src={`http://localhost:5678${product?.image?.replace("image", "")}`}
+          src={`https://game-store-react-backend.onrender.com${product?.image?.replace(
+            "image",
+            ""
+          )}`}
           alt={product.name}
           w="100%"
           h="200px"

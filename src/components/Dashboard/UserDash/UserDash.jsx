@@ -50,7 +50,10 @@ export function UserDash({ user }) {
           <Avatar
             size={"md"}
             alt={"user image"}
-            src={`http://localhost:5678${user?.image.replace("image", "")}`}
+            src={`https://game-store-react-backend.onrender.com${user?.image.replace(
+              "image",
+              ""
+            )}`}
           />
         )}
       </div>

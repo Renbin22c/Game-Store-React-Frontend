@@ -29,7 +29,10 @@ export function EditProduct({ product, onClose, isOpen }) {
   const [editProduct, setEditProduct] = useState(product);
   const [image, setImage] = useState(null);
   const [selectedImage, setSelectedImage] = useState(
-    `http://localhost:5678${product.image.replace("image", "")}`
+    `https://game-store-react-backend.onrender.com${product.image.replace(
+      "image",
+      ""
+    )}`
   );
   const queryClient = useQueryClient();
 

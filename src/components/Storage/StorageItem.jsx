@@ -28,7 +28,7 @@ export function StorageItem({ product }) {
       </Flex>
       <Box p={4}>
         <Image
-          src={`http://localhost:5678${product.product?.image?.replace(
+          src={`https://game-store-react-backend.onrender.com${product.product?.image?.replace(
             "image",
             ""
           )}`}

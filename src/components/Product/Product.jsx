@@ -108,7 +108,10 @@ export function ProductId() {
             <Image
               rounded={"md"}
               alt={data?.name}
-              src={`http://localhost:5678${data?.image.replace("image", "")}`}
+              src={`https://game-store-react-backend.onrender.com${data?.image.replace(
+                "image",
+                ""
+              )}`}
               fit={"cover"}
               align={"center"}
               w={"100%"}

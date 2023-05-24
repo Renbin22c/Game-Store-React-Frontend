@@ -83,7 +83,7 @@ export function Comment({ comment }) {
           src={
             comment?.user?.image === null
               ? ""
-              : `http://localhost:5678${comment?.user?.image.replace(
+              : `https://game-store-react-backend.onrender.com${comment?.user?.image.replace(
                   "image",
                   ""
                 )}`

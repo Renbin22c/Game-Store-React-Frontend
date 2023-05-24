@@ -68,7 +68,10 @@ export function Storage() {
               pos="relative"
               src={
                 user?.image
-                  ? `http://localhost:5678${user?.image.replace("image", "")}`
+                  ? `https://game-store-react-backend.onrender.com${user?.image.replace(
+                      "image",
+                      ""
+                    )}`
                   : ""
               }
             />

@@ -104,7 +104,7 @@ export default function Topnav() {
                     src={
                       data
                         ? user?.image
-                          ? `http://localhost:5678${user?.image.replace(
+                          ? `https://game-store-react-backend.onrender.com${user?.image.replace(
                               "image",
                               ""
                             )}`
@@ -121,7 +121,7 @@ export default function Topnav() {
                       src={
                         data
                           ? user?.image
-                            ? `http://localhost:5678${user?.image.replace(
+                            ? `https://game-store-react-backend.onrender.com${user?.image.replace(
                                 "image",
                                 ""
                               )}`

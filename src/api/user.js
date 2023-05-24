@@ -2,23 +2,29 @@ import axios from "axios";
 
 export const userRegister = async (registerData) => {
   const res = await axios.post(
-    "http://localhost:5678/users/register",
+    "https://game-store-react-backend.onrender.com/users/register",
     registerData
   );
   return res.data;
 };
 
 export const userLogin = async (loginData) => {
-  const res = await axios.post("http://localhost:5678/users/login", loginData);
+  const res = await axios.post(
+    "https://game-store-react-backend.onrender.com/users/login",
+    loginData
+  );
   return res.data;
 };
 
 export const getUserById = async ({ id, token }) => {
-  const res = await axios.get(`http://localhost:5678/users/${id}`, {
-    headers: {
-      "x-auth-token": token,
-    },
-  });
+  const res = await axios.get(
+    `https://game-store-react-backend.onrender.com/users/${id}`,
+    {
+      headers: {
+        "x-auth-token": token,
+      },
+    }
+  );
   return res.data;
 };
 
@@ -33,7 +39,7 @@ export const userUpdate = async (user) => {
   console.log(user.image);
 
   const res = await axios.put(
-    `http://localhost:5678/users/${user.updateUser._id}`,
+    `https://game-store-react-backend.onrender.com/users/${user.updateUser._id}`,
     formData,
     {
       headers: {
@@ -46,13 +52,18 @@ export const userUpdate = async (user) => {
 };
 
 export const getUsers = async () => {
-  const res = await axios.get("http://localhost:5678/users");
+  const res = await axios.get(
+    "https://game-store-react-backend.onrender.com/users"
+  );
   return res.data;
 };
 
 export const deleteUser = async ({ id, token }) => {
-  const res = await axios.delete(`http://localhost:5678/users/${id}`, {
-    headers: { "x-auth-token": token },
-  });
+  const res = await axios.delete(
+    `https://game-store-react-backend.onrender.com/users/${id}`,
+    {
+      headers: { "x-auth-token": token },
+    }
+  );
   return res.data;
 };

@@ -1,12 +1,16 @@
 import axios from "axios";
 
 export const getProducts = async () => {
-  const res = await axios.get("http://localhost:5678/products");
+  const res = await axios.get(
+    "https://game-store-react-backend.onrender.com/products"
+  );
   return res.data;
 };
 
 export const getProductById = async (id) => {
-  const res = await axios.get(`http://localhost:5678/products/${id}`);
+  const res = await axios.get(
+    `https://game-store-react-backend.onrender.com/products/${id}`
+  );
   return res.data;
 };
 
@@ -23,11 +27,15 @@ export const addProduct = async ({ product, image, token }) => {
   formData.append("image", image);
   formData.append("video", product.video);
   formData.append("release_time", product.release_time);
-  const res = await axios.post("http://localhost:5678/products", formData, {
-    headers: {
-      "x-auth-token": token,
-    },
-  });
+  const res = await axios.post(
+    "https://game-store-react-backend.onrender.com/products",
+    formData,
+    {
+      headers: {
+        "x-auth-token": token,
+      },
+    }
+  );
   return res.data;
 };
 
@@ -47,7 +55,7 @@ export const updateProduct = async ({ editProduct, image, token }) => {
   formData.append("release_time", editProduct.release_time);
 
   const res = await axios.put(
-    `http://localhost:5678/products/${editProduct._id}`,
+    `https://game-store-react-backend.onrender.com/products/${editProduct._id}`,
     formData,
     {
       headers: {
@@ -59,15 +67,22 @@ export const updateProduct = async ({ editProduct, image, token }) => {
 };
 
 export const deleteProduct = async ({ id, token }) => {
-  const res = await axios.delete(`http://localhost:5678/products/${id}`, {
-    headers: { "x-auth-token": token },
-  });
+  const res = await axios.delete(
+    `https://game-store-react-backend.onrender.com/products/${id}`,
+    {
+      headers: { "x-auth-token": token },
+    }
+  );
   return res.data;
 };
 
 export const likeProduct = async ({ id, token }) => {
-  const res = await axios.post(`http://localhost:5678/likes/${id}`, "", {
-    headers: { "x-auth-token": token },
-  });
+  const res = await axios.post(
+    `https://game-store-react-backend.onrender.com/likes/${id}`,
+    "",
+    {
+      headers: { "x-auth-token": token },
+    }
+  );
   return res.data;
 };

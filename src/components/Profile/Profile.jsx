@@ -87,7 +87,7 @@ export function Profile() {
                   size="xl"
                   src={
                     updateUser?.image
-                      ? `http://localhost:5678${updateUser?.image.replace(
+                      ? `https://game-store-react-backend.onrender.com${updateUser?.image.replace(
                           "image",
                           ""
                         )}`

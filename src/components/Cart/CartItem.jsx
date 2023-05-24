@@ -43,7 +43,7 @@ export function CartItem({ item }) {
         <Mask
           className="object-cover h-20 w-40"
           variant="squircle"
-          src={`http://localhost:5678${item.product.image.replace(
+          src={`https://game-store-react-backend.onrender.com${item.product.image.replace(
             "image",
             ""
           )}`}
